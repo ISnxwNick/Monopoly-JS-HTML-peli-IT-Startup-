@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Startup</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>IT Startup</h1>
+    <button id="instructions-button">Ohjeet</button>
+
+    <div id="game">
+
+        <div id="board">
+            <!-- pelilauta -->
+             <div id="center">
+                <h2>IT Startup</h2>
+                    <p id="current-player">Pelaaja 1</p>
+                    <p id="dice-result">Nopan tulos: </p>
+                    <p id="square-info">Ruutu: Aloitus</p>
+                    <button id="roll-button">Heitä noppaa</button>
+                    <button id="roll-button-2">Pelaaja 2: Heitä noppaa</button>
+                    <button id="buy-button" hidden>Osta</button>
+                    <button id="decline-button" hidden>Ohita osto</button>
+             </div>
+        </div>
+
+        <div id="info">
+            <div class="timer-info">
+                <h2>Aikaa jäljellä</h2>
+                <p id="timer">05:00</p>
+            </div>
+
+            <h2>Pelaajat</h2>
+            <div class="player-info">
+                <h3 class="player-one">Pelaaja 1</h3>
+                <p id="money-player-1">Rahaa: 1000 €</p>
+                <p id="assets-player-1">Omaisuuden arvo: 1000 €</p>
+            </div>
+            <div class="player-info">
+                <h3 class="player-two">Pelaaja 2</h3>
+                <p id="money-player-2">Rahaa: 1000 €</p>
+                <p id="assets-player-2">Omaisuuden arvo: 1000 €</p>
+            </div>
+
+            <h2>Pelaajien omaisuus</h2>
+            <div class="player-info">
+                <h3 class="player-one">Pelaaja 1</h3>
+                <p id="properties-player-1">Ei omaisuutta</p>
+            </div>
+            <div class="player-info">
+                <h3 class="player-two">Pelaaja 2</h3>
+                <p id="properties-player-2">Ei omaisuutta</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="instructions-overlay" hidden></div>
+    <div id="instructions-window" hidden>
+        <h2>Pelin ohjeet</h2>
+
+        <h3>Pelin tavoite</h3>
+        <p>
+            Pelin tavoitteena on kerätä mahdollisimman paljon omaisuutta viiden minuutin aikana.
+        </p>
+
+        <h3>Pelin kulku</h3>
+        <p>
+            Pelaajat heittävät noppaa vuorotellen. Nopan tulos kertoo, kuinka monta ruutua pelaaja liikkuu.
+        </p>
+
+        <h3>Kohteiden ostaminen</h3>
+        <p>
+            Jos pelaaja päätyy vapaaseen kohteeseen, hän voi ostaa sen, jos hänellä on tarpeeksi rahaa.
+        </p>
+
+        <h3>Vuokra</h3>
+        <p>
+            Jos pelaaja päätyy toisen pelaajan omistamaan kohteeseen, hänen täytyy maksaa vuokraa kohteen omistajalle.
+        </p>
+
+        <h3>Erikoisruudut</h3>
+        <p>
+            <strong>Tapahtuma:</strong>
+            Saat 200 € tai menetät 100 €.
+        </p>
+        <p>
+            <strong>Sijoittaja:</strong>
+            Saat 300 €.
+        </p>
+        <p>
+            <strong>Asiakas:</strong>
+            Saat 150 €.
+        </p>
+        <p>
+            <strong>Julkaisu:</strong>
+            Saat 500 €.
+        </p>
+        <p>
+            <strong>Aloitus:</strong>
+            Kun ohitat Aloitus-ruudun, saat 200 €.
+        </p>
+
+        <h3>Pelin päättyminen</h3>
+        <p>
+            Peli kestää viisi minuuttia. Peli voi päättyä myös, jos pelaaja menee konkurssiin.
+        </p>
+        <p>
+            Pelin voittaa pelaaja, jolla on enemmän omaisuutta pelin päättyessä.
+        </p>
+
+        <button id="close-instructions">Sulje</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

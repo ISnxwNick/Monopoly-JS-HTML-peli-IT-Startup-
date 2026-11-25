@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body > h1 {
+    text-align: left;
+    font-size: 24px;
+    margin: 10px 0 5px 20px;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+#board {
+    width: 520px;
+    height: 520px;
+    border: 2px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.square {
+     border: 1px solid #555;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.property {
+    background-color: lightblue;
+}
+
+.event {
+    background-color: lightyellow;
+}
+
+.investor {
+    background-color: plum;
+}
+
+.start {
+    background-color: lightgreen;
+}
+
+.customer {
+    background-color: lightyellow;
+}
+
+.release {
+    background-color: lightcoral;
+}
+
+.player {
+    width: 25px;
+    height: 25px;
+
+    background: linear-gradient(135deg, #889fdb, blue);
+    border-radius: 50%;
+
+    z-index: 10;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.player2 {
+    background: linear-gradient(135deg, #ff6666, #cc0000);
+}
+
+/*varit pelaajille */
+.player-one {
+    color: blue;
+}
+
+.player-two {
+    color: red;
+}
+
+#center {
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#center h2 {
+    margin-bottom: 10px;
+}
+
+#center p {
+    margin: 5px;
+}
+
+#roll-button {
+    margin-top: 15px;
+}
+
+
+#info {
+    width: 240px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: #f5f5f5;
+}
+
+#info h2 {
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+#info p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.timer-info {
+    text-align: center;
+}
+
+#timer {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 8px 15px;
+    display: inline-block;
+}
+
+.game-over {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+#instructions-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    padding: 25px;
+
+    background: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+    z-index: 100;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#instructions-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 99;
+}
+
+@media (max-width: 1000px) {            /*pienemmälle näytölle */
+    #game {
+        flex-wrap: wrap;
+    }
+}
